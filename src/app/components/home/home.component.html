@@ -1,0 +1,13 @@
+<div *ngIf="info.token; else loggedOut">
+  <h5 class="text-primary">Felhasználó adatok</h5>
+  <p>
+    <strong>Felhasználónév:</strong> {{info.username}}<br/>
+    <strong>Szerepkor:</strong> {{info.authorities}}<br />
+    <strong>Token:</strong> {{info.token}}.
+  </p>
+  <button class="btn btn-secondary" (click)="logout()">Kijelentkezés</button>
+</div>
+
+<ng-template #loggedOut>
+  Jelentkezz be.
+</ng-template>
